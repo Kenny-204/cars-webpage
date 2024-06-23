@@ -1,0 +1,270 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap'); */
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: none;
+
+}
+
+:root {
+    --blue: #0cafe1;
+    --grey: #f4f7fe;
+    --gray: #525252;
+    --lbl: #cdfbff;
+    --pink: #fffcf7;
+    --darkblue: #2b5061;
+}
+
+.flex {
+    display: flex;
+}
+
+/* Navbar */
+li,
+a,
+.nav--button {
+    font-size: 16px;
+    font-weight: 550;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: white;
+max-width: 100%;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.nav {
+    list-style: none;
+
+}
+
+.nav li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.nav li a,
+.nav li a:active {
+
+    color: var(--gray);
+    transition: all 0.3s ease 0s;
+}
+
+
+.nav li a:hover {
+    color: blue
+}
+
+.nav--button {
+    padding: 13px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--blue);
+    color: var(--grey);
+}
+
+/* Navbar end */
+/* Section */
+.section--1 {
+    background-color: var(--grey);
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 30px 0px 30px 40px;
+    position: relative;
+    z-index: -1;
+
+}
+
+.img--label {
+    font-size: 55px;
+    font-family: sans-serif;
+}
+
+.l {
+    font-size: 30px;
+    margin: 20px 0 30px 0;
+}
+
+.section--1 p img {
+    position: absolute;
+    top: 85px;
+    left: 195px
+}
+
+.cap {
+    font-weight: 550;
+    color: var(--gray);
+    padding: 20px 0 0 5px;
+    margin-bottom: -12px;
+
+}
+
+.store--btn {
+    margin-top: 40px;
+
+}
+
+/* Section end */
+.hori--bar {
+    margin-left: 300px;
+    width: 60%;
+    justify-content: space-between;
+    margin-bottom: -50px;
+    position: absolute;
+    border-radius: 5px 5px 5px 5px;
+    background-color: white;
+    box-shadow: 0.2px 0.2px 50px #d4d4d4;
+    bottom: 0;
+    z-index: 3;
+}
+
+.hori--bar p,
+.hori--bar input {
+    padding: 20px;
+    border: none;
+    color: var(--gray);
+
+}
+
+.hori--bar button {
+    padding: 25px;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    background-color: var(--blue);
+    color: var(--lbl);
+
+}
+
+/* next section */
+.section--a {
+    transition: transform 1s, opacity 1s;
+}
+
+.section--hidden {
+    opacity: 0;
+    transform: translateY(8rem);
+}
+
+.section {
+    margin: 120px 0 30px 20px;
+    font-size: 25px;
+
+}
+
+/* hori-bar 2 */
+.hori--bar2 {
+    padding: 30px;
+    justify-content: space-evenly;
+    background-color: white;
+    box-shadow: 0.2px 0.2px 10px #e9e9e9;
+
+}
+
+
+.arrange span {
+    font-size: 50px;
+    font-weight: 550;
+    color: var(--blue);
+    padding: 0 10px 10px 10px;
+}
+
+.arrange p {
+    color: var(--gray);
+    font-size: 20px;
+    font-weight: 550;
+}
+
+/* next section */
+.find-service {
+    padding: 30px;
+}
+
+.find-service p {
+    font-weight: 550;
+    font-size: 20px;
+    color: black;
+}
+
+.find-service a {
+    font-size: 20px;
+    font-weight: lighter;
+    margin-left: 10px;
+    color: var(--blue);
+}
+
+/* next section */
+.img-cont {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    padding: 50px;
+    text-align: center;
+
+
+}
+
+.image-container {
+    padding: 50px;
+}
+
+.car-labels {
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+
+}
+
+.car-label2 {
+    color: #858585;
+    padding: 10px;
+}
+
+.seemore {
+    background-color: white;
+    color: var(--blue);
+    border: 0.5px solid var(--blue);
+    padding: 7px 40px;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-left: 45%;
+    margin-bottom: 10%;
+}
+
+.book-car {
+    background-color: var(--pink);
+    text-align: center;
+    padding: 40px;
+}
+
+.book-car h1 {
+    padding-bottom: 10px;
+}
+
+.p-lorem {
+    padding: 10px;
+    color: var(--gray);
+}
+
+.car-description button {
+    background-color: inherit;
+    color: var(--gray);
+    border: 0.5px var(--gray) solid;
+    padding: 5px 40px;
+    margin-right: 10px;
+    border-radius: 2px;
+}
+
+.card-container {
+    display: flex;
+}
