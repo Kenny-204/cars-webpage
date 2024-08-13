@@ -1,5 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap'); */
-
 * {
     margin: 0;
     box-sizing: border-box;
@@ -26,7 +24,7 @@
 li,
 a,
 .nav--button {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 550;
     text-decoration: none;
 }
@@ -37,7 +35,7 @@ header {
     align-items: center;
     padding: 20px 40px;
     background-color: white;
-max-width: 100%;
+    max-width: 100%;
 }
 
 .logo {
@@ -66,6 +64,7 @@ max-width: 100%;
     color: blue
 }
 
+
 .nav--button {
     padding: 13px 20px;
     border: none;
@@ -76,31 +75,141 @@ max-width: 100%;
 }
 
 /* Navbar end */
-/* Section */
-.section--1 {
-    background-color: var(--grey);
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    padding: 30px 0px 30px 40px;
-    position: relative;
-    z-index: -1;
+/* The dropdown */
+.dropdown--menu {
+    display: none;
+    height: 0;
+    position: absolute;
+    right: 2rem;
+    color:  var(--gray);
+    top: 60px;
+    width: 250px;
+    background:  #f4f7fe;
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 1rem;
+    font-weight: 550;
+    text-decoration: none;
+    box-shadow: 1px 1px 13px #d7e3ff;
+    list-style: none;
+    /* display: inline-block; */
+    padding: 10px 20px;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown--menu li,.dropdown--menu a {
+    padding: 7px;
+    color:  var(--gray);
+}
+
+.dropdown--menu.open {
+    height: 350px;
+    display: block;
+}
+
+/* dropdown end */
+/* media queries */
+@media all and (max-width:780px) {
+
+    .nav,
+    .ff {
+        display: none;
+    }
+}
+
+@media all and (min-width:780px) {
+    .toggle_Btn {
+        display: none;
+    }
+}
+
+@media all and (max-width:1110px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 10px;
+        background-color: white;
+        max-width: 100%;
+    }
+
+    .nav li {
+        display: inline-block;
+        padding: 0 10px;
+    }
 
 }
 
+@media all and (max-width:918px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 5 px;
+        /* background-color: red; */
+
+
+    }
+
+    .nav li {
+        display: inline-block;
+        padding: 0 3px;
+    }
+
+    .nav--button {
+        padding: 13px 5px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        /* background-color: green; */
+        color: var(--grey);
+    }
+
+}
+
+/* media query end */
+.section--a {
+    transition: transform 1s, opacity 1s;
+}
+
+.section--hidden {
+    opacity: 0;
+    transform: translateY(8rem);
+}
+
+/* Section--1 */
+.section--1 {
+    background-color: var(--grey);
+    justify-content: space-between;
+    padding: 10px 0px 90px 20px;
+    position: relative;
+    z-index: -1;
+    Background-image: url('img/sidecar.webp');
+    background-repeat: no-repeat;
+    background-position: 170% 0%;
+    background-size: 40%;
+    transition: background-position 0.7s ease-in;
+}
+
+.move {
+    background-position: 100% 0%;
+}
+
 .img--label {
-    font-size: 55px;
+    font-size: 3.438rem;
     font-family: sans-serif;
 }
 
 .l {
-    font-size: 30px;
-    margin: 20px 0 30px 0;
+    font-size: 1.875rem;
+    margin: 20px 0 0px 0;
 }
 
 .section--1 p img {
     position: absolute;
-    top: 85px;
-    left: 195px
+    top: 20px;
+    left: 145px;
 }
 
 .cap {
@@ -113,21 +222,132 @@ max-width: 100%;
 
 .store--btn {
     margin-top: 40px;
+    width: 170px;
+}
+
+@media all and (min-width:1180px) {
+    .img--label {
+        font-size:3.125rem;
+        font-family: sans-serif;
+    }
+
+    .l {
+        font-size:1.563rem;
+        margin: 20px 0 0px 0;
+    }
+
+    .store--btn {
+        margin-top: 40px;
+        width: 170px;
+    }
+
+    .cap {
+        font-size:0.938rem;
+    }
+
+    .section--1 p img {
+        position: absolute;
+        top: 20px;
+        left: 145px;
+        /* width: 10px; */
+    }
+}
+
+@media all and (max-width:1178px) {
+    .img--label {
+        font-size:2.188rem;
+        font-family: sans-serif;
+    }
+
+    .store--btn img {
+        margin-top: 0px;
+        width: 150px;
+    }
+
+    .section--1 {
+        padding: 10px 0px 35px 20px;
+    }
+
+    .section--1 p img {
+        position: absolute;
+        top: 25px;
+        left: 175px;
+        /* width: 10px; */
+    }
+}
+
+@media all and (max-width:611px) {
+    .img--label {
+        font-size:1.063rem;
+        font-family: sans-serif;
+    }
+
+    .l {
+        font-size:0.813rem;
+        margin: 20px 0 0px 0;
+    }
+
+    .store--btn img {
+        margin-top: 0px;
+        width: 100px;
+    }
+
+    .cap {
+        font-size:0.625rem;
+        padding: 0px 0 0 0px;
+        margin-top: 15px;
+    }
+
+    .section--1 p img {
+        position: absolute;
+        top: 26px;
+        left: 85px;
+        width: 80px;
+    }
+
 
 }
 
-/* Section end */
+@media all and (max-width:320px) {
+    .img--label {
+        font-size:0.938rem;
+        font-family: sans-serif;
+    }
+
+    .cap {
+        font-size:0.438rem;
+        padding: 0px 0 0 0px;
+        margin-bottom: 0;
+    }
+}
+
+
+/* Section--1 end */
+/* Hori bar */
+.hori--bar--section {
+    position: relative;
+    padding: 20px;
+}
+
+.hori--bar--section .section--a.b {
+    font-size:1.563rem;
+    padding: 40px 0;
+}
+
 .hori--bar {
-    margin-left: 300px;
-    width: 60%;
+    /* margin-left: 300px; */
+    /* width: 60%; */
     justify-content: space-between;
-    margin-bottom: -50px;
+    /* margin-bottom: -50px; */
     position: absolute;
     border-radius: 5px 5px 5px 5px;
     background-color: white;
     box-shadow: 0.2px 0.2px 50px #d4d4d4;
-    bottom: 0;
+    /* bottom: 0; */
     z-index: 3;
+    left: 20%;
+    margin-top: -35px;
+    top: 0;
 }
 
 .hori--bar p,
@@ -147,23 +367,33 @@ max-width: 100%;
 
 }
 
-/* next section */
-.section--a {
-    transition: transform 1s, opacity 1s;
+@media all and (max-width:1046px) {
+    .hori--bar {
+        left: 15%
+    }
 }
 
-.section--hidden {
-    opacity: 0;
-    transform: translateY(8rem);
+@media all and (max-width:953px) {
+    .hori--bar {
+        left: 10%
+    }
 }
 
-.section {
-    margin: 120px 0 30px 20px;
-    font-size: 25px;
-
+@media all and (max-width:952px) {
+    .hori--bar {
+        display: none;
+    }
 }
 
-/* hori-bar 2 */
+@media all and (max-width:952px) {
+    .hori--bar--section .section--a.b {
+        font-size:0.938rem;
+        padding: 10px 0;
+    }
+}
+
+/* horibar end */
+/* horibar 2 */
 .hori--bar2 {
     padding: 30px;
     justify-content: space-evenly;
@@ -174,7 +404,7 @@ max-width: 100%;
 
 
 .arrange span {
-    font-size: 50px;
+    font-size:3.125rem;
     font-weight: 550;
     color: var(--blue);
     padding: 0 10px 10px 10px;
@@ -182,11 +412,71 @@ max-width: 100%;
 
 .arrange p {
     color: var(--gray);
-    font-size: 20px;
+    font-size:1.25rem;
     font-weight: 550;
 }
 
-/* next section */
+@media all and (max-width:981px) {
+
+    .hori--bar2 {
+        padding: 30px 10px;
+    }
+
+
+    .arrange span {
+        font-size:3.125rem;
+        font-weight: 550;
+        padding: 0 10px 10px 10px;
+    }
+
+    .arrange p {
+        color: var(--gray);
+        font-size:1.25rem;
+        font-weight: 550;
+    }
+}
+
+@media all and (max-width:951px) {
+
+    .hori--bar2 {
+        padding: 30px 10px;
+    }
+
+
+    .arrange span {
+        font-size:2.5rem;
+        font-weight: 550;
+        padding: 0 10px 10px 10px;
+    }
+
+    .arrange p {
+        color: var(--gray);
+        font-size:0.938rem;
+        font-weight: 550;
+    }
+}
+
+@media all and (max-width:775px) {
+
+    .hori--bar2 {
+        padding: 20px 10px;
+    }
+
+
+    .arrange span {
+        font-size:1.675rem;
+        font-weight: 550;
+        padding: 0 7px 7px 7px;
+    }
+
+    .arrange p {
+        color: var(--gray);
+        font-size:0.638rem;
+        font-weight: 550;
+    }
+}
+
+/* horibar 2 end */
 .find-service {
     padding: 30px;
 }

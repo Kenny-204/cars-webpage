@@ -38,7 +38,7 @@ const revealSection = function () {
         observer.observe(el);
     });
 }
-// revealSection()
+revealSection()
 
 // Dropdown menu
 const closeDropdown = function () {
